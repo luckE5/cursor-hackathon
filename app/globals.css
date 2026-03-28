@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+:root {
+  --background: #e8f0ff;
+  --foreground: #0f172a;
+  --page-bg: transparent;
+  --card: rgba(255, 255, 255, 0.52);
+  --muted: #64748b;
+  --px: 0;
+  --py: 0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    125deg,
+    #e0f2fe 0%,
+    #e0e7ff 28%,
+    #ede9fe 55%,
+    #dbeafe 85%,
+    #fae8ff 100%
+  );
+  background-size: 220% 220%;
+  animation: aurora-shift 22s ease-in-out infinite alternate;
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+@keyframes aurora-shift {
+  0% {
+    background-position: 0% 40%;
+  }
+  100% {
+    background-position: 100% 60%;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float-slow {
+  animation: float-soft 6s ease-in-out infinite;
+}
+
+@keyframes skeleton-wave {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(
+    105deg,
+    rgba(255, 255, 255, 0.22) 0%,
+    rgba(255, 255, 255, 0.55) 45%,
+    rgba(255, 255, 255, 0.22) 90%
+  );
+  background-size: 220% 100%;
+  animation: skeleton-wave 1.45s ease-in-out infinite;
+}
+
+@keyframes section-fade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-reveal {
+  animation: section-fade 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.premium-parallax-orb {
+  will-change: transform;
+  transform: translate3d(
+    calc(var(--px, 0) * 20px),
+    calc(var(--py, 0) * 16px),
+    0
+  );
+  transition: transform 0.22s ease-out;
+}
+
+.premium-parallax-orb-slow {
+  will-change: transform;
+  transform: translate3d(
+    calc(var(--px, 0) * -12px),
+    calc(var(--py, 0) * -10px),
+    0
+  );
+  transition: transform 0.28s ease-out;
+}
