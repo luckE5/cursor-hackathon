@@ -1,131 +1,96 @@
-🧠 ChronoSync — AI-Powered Scheduling & Coordination Platform
-ChronoSync is a modern, AI-powered scheduling platform designed to help individuals, students, and teams plan their time intelligently and coordinate effortlessly.
-Unlike traditional calendar apps, ChronoSync focuses on decision-making and negotiation of time, not just tracking it.
-🚀 Problem
-Managing time across people is still messy:
-Endless back-and-forth messages
-No clear visibility of availability
-Hard to plan tasks without structure
-Calendars don’t help you decide time, they only show time
-💡 Solution
-ChronoSync solves this by combining:
-🧠 AI-powered schedule generation
-🔄 Real-time schedule coordination
-🤝 Time request & negotiation system
-✨ Key Features
-🧑‍💻 Personal Scheduling
-Create flexible daily/weekly schedules
-Add time blocks (work, study, meetings, free time)
-Fully editable and customizable
-🤖 AI Schedule Generation
-Input natural language:
-“I have DSA, gym, classes, I am a night owl”
-AI generates structured schedules automatically
-Considers:
-preferences (morning/night)
-workload balance
-breaks
-📋 Task-to-Schedule Conversion
-Input only tasks
-AI assigns optimal time slots
-Ideal for students and productivity-focused users
-🔐 Permission-Based Sharing
-Users control who can view their schedule
-Request-based visibility
-Privacy-first approach
-📩 Time Request System (Core Feature)
-Request specific time slots from others
-Works in 2 scenarios:
-1. Overlap exists
-Auto-suggest best time
-One-click confirmation
-2. No overlap
-Request any time
-Receiver can:
-accept
-reject
-suggest alternative
-🔄 Negotiation Flow
-Real-world scheduling flexibility
-Dynamic interaction between users
-👀 Shared Schedule View
-Visual comparison of schedules
-Highlights:
-overlapping time
-conflicts
-requested slots
-⚡ Real-Time Updates
-Instant synchronization
-Both users’ schedules update after confirmation
-🏢 Organization / Corporate Mode (Concept)
-Shared visibility within teams
-Managers can assign meeting slots
-Efficient coordination within working hours
-🛠️ Tech Stack
+ChronoSync
+
+ChronoSync is a scheduling and coordination platform designed to help people connect through time. It enables users to plan their day, align with others, and coordinate activities seamlessly — from casual meetups to structured team workflows.
+
+Overview
+
+Coordinating time between people is often inefficient and fragmented. ChronoSync addresses this by combining intelligent scheduling with a shared calendar experience, allowing users to not only manage their own time but also interact with others’ availability in real time.
+
+The platform is built around a simple idea: time should be shared, visible, and easy to act on.
+
+Key Features
+Smart Schedule Generation
+Create schedules using natural language input
+Automatically structured into time blocks
+Balanced distribution of tasks with breaks and buffers
+Interactive Calendar
+Fully editable calendar interface
+Create, move, and resize tasks directly
+Single source of truth for all scheduling actions
+Social Coordination (Friends System)
+Add and manage connections
+View availability of other users (with privacy controls)
+Select time slots directly from shared calendars
+Plan hangouts without back-and-forth communication
+Shared Schedule View
+Compare schedules between users
+Identify overlapping availability
+Resolve conflicts visually
+Organization and Team Management
+Create and join organizations
+Manager-level controls for assigning meetings and tasks
+Real-time updates across team members
+Team Availability Insights
+Visual highlights of time slots where most team members are free
+Enables efficient scheduling and better collaboration decisions
+Notifications
+Email notifications for key events such as:
+meeting requests
+confirmations
+assigned tasks
+reminders
+Privacy and Permissions
+User-controlled schedule visibility
+Restricted access to sensitive information
+Secure interaction between users
+Workflows
+Personal Planning
+User describes their day in natural language
+System generates a structured schedule
+Schedule is displayed in the calendar
+User can modify it interactively
+Social Coordination
+Users connect with others
+View availability through shared calendar
+Select a suitable time slot
+Confirm and create a meeting
+Organizational Flow
+Users join or create an organization
+Managers view team schedules
+Identify optimal collaboration windows
+Assign meetings or tasks
+Updates reflect in real time
+Tech Stack
+
 Frontend
+
 Next.js (App Router)
 TypeScript
 Tailwind CSS
-shadcn/ui
-v0 (UI generation)
-Backend
-Convex (database + real-time functions)
-AI
-OpenAI API (schedule generation & parsing)
-Development
-Cursor (AI-assisted coding)
-Design
-Mobbin (UI inspiration)
-🧩 Architecture
-Id="arch"
-Copy code
-Frontend (Next.js)
-      ↓
-Convex (Realtime Backend)
-      ↓
-OpenAI (AI Engine)
-      ↓
-Convex (Store Results)
-      ↓
-Frontend (Live Updates)
-🔁 User Flow
-User signs in
-Inputs tasks or schedule preferences
-AI generates structured schedule
-User sends time request
-Receiver accepts/rejects/suggests
-Meeting is finalized
-Both schedules update in real-time
-🧪 Running Locally
-1. Clone the repo
-Bash id="clone"
-Copy code
-git clone <your-repo-url>
-cd chronosync
-2. Install dependencies
-Bash id="install"
-Copy code
-npm install
-3. Start Convex backend
-Bash id="convex"
-Copy code
-npx convex dev
-4. Setup environment variables
-Create .env.local and add:
-Env id="env"
-Copy code
-NEXT_PUBLIC_CONVEX_URL=your_convex_url
-OPENAI_API_KEY=your_openai_key
-5. Start frontend
-Bash id="dev"
-Copy code
-npm run dev
-6. Open in browser
-Copy code
 
+Backend
+
+Convex (real-time database and server logic)
+
+Scheduling Engine
+
+Custom-built intelligent planner
+
+Other
+
+Nodemailer (email notifications)
+MVP Scope
+
+The MVP focuses on solving the core problem of time coordination by integrating:
+
+intelligent schedule generation
+shared calendar interaction
+social and team-based coordination
+real-time updates
+Impact
+
+ChronoSync improves how people connect and collaborate by making time coordination simple and actionable. It reduces friction in planning, enables faster decisions, and supports both personal and professional interactions.
 http://localhost:3000
-🎬 Demo
-(Add your demo video link here)
 🌍 Vision
 ChronoSync is built for the next billion users — simplifying time management and making coordination effortless across personal and professional environments.
 📌 Future Improvements
