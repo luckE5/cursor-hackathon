@@ -579,8 +579,8 @@ export default function ProfilePage() {
                 <DialogTrigger asChild>
                   <Button
                     type="button"
-                    variant="destructive"
-                    className="rounded-lg"
+                    variant="default"
+                    className="bg-red-500 hover:bg-red-600 text-white rounded-lg"
                   >
                     Delete your profile
                   </Button>
